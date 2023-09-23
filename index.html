@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body>
+    <main class="container">
+      <section class="date-wrapper">
+        <div class="sub-wrapper">
+          <p class="date-text" id="dayText">day</p>
+          <input
+            type="text"
+            placeholder="DD"
+            class="input-value"
+            id="dayValue"
+          />
+          <p class="error-msg fst-italic" id="errorMsgDay"></p>
+        </div>
+        <div class="sub-wrapper">
+          <p class="date-text" id="monthText">month</p>
+          <input
+            type="text"
+            placeholder="MM"
+            class="input-value"
+            id="monthValue"
+          />
+          <p class="error-msg fst-italic" id="errorMsgMonth"></p>
+        </div>
+        <div class="sub-wrapper">
+          <p class="date-text" id="yearText">year</p>
+          <input
+            type="text"
+            placeholder="YYYY"
+            class="input-value"
+            id="yearValue"
+          />
+          <p class="error-msg fst-italic" id="errorMsgYear"></p>
+        </div>
+      </section>
+      <div class="img-container">
+        <img
+          src="assets/images/icon-arrow.svg"
+          alt=""
+          class="arrow-img"
+          onclick="calcAge()"
+        />
+      </div>
+      <section class="result-section">
+        <div class="result-wrapper fst-italic fw-bold">
+          <span class="result" id="resultYear">--</span>
+          <span class="year"> years</span>
+        </div>
+        <div class="result-wrapper fst-italic fw-bold">
+          <span class="result" id="resultMonth">--</span>
+          <span class="month"> months</span>
+        </div>
+        <div class="result-wrapper fst-italic fw-bold">
+          <span class="result" id="resultDay">--</span>
+          <span class="day"> days</span>
+        </div>
+      </section>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="">Daniel</a>.
+    </div>
+  </body>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+
+  <script src="script.js"></script>
+</html>

@@ -1,0 +1,153 @@
+/*====== GOOGLE FONTS ======*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+/*====== VARIABLES ======*/
+:root {
+    --purple: hsl(259, 100%, 65%);
+    --light-red: hsl(0, 100%, 67%);
+    --lighter-red: hsla(0, 100%, 67%, 0.767);
+    --white: hsl(0, 0%, 100%);
+    --off-white: hsl(0, 0%, 94%);
+    --light-grey: hsl(0, 0%, 86%);
+    --smokey-grey: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%);
+}
+
+/*====== BASE ======*/
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-grey);
+    font-size: 62.5%;
+}
+
+/*====== MAIN CLASSES ======*/
+.container {
+    width: 370px;
+    margin: 8rem auto;
+    padding-inline: 1.3rem;
+    padding-top: 3rem;
+    background-color: var(--white);
+    border-radius: 15px 15px 100px 15px;
+}
+
+.date-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+.date-text {
+    margin: 0;
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-bottom: 2px;
+    color: var(--smokey-grey);
+}
+
+.input-value {
+    margin: 0;
+    width: 90px;
+    height: 50px;
+    padding-left: 10px;
+    font-size: 1.2rem;
+    border: 2px solid var(--light-grey);
+    border-radius: 10px;
+}
+
+.error-msg {
+    color: var(--light-red);
+    padding-top: 5px;
+    font-size: .55rem;
+}
+
+.img-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    z-index: 1;
+}
+
+.img-container::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--light-grey);
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.arrow-img {
+    background-color: var(--purple);
+    padding: 1rem;
+    border-radius: 10rem;
+    display: block;
+    margin: 0 auto;
+    width: 65px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.arrow-img:hover {
+    background-color: var(--off-black);
+}
+
+.result-section {
+    padding-block: 2rem;
+}
+
+.result-wrapper {
+    font-size: 3rem;
+}
+
+.result {
+    color: var(--purple);
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 600px;
+        padding-block: 2rem;
+        padding-inline: 3rem;
+
+        border-radius: 15px 15px 150px 15px;
+    }
+
+    .arrow-img {
+        float: right;
+    }
+
+    .date-wrapper {
+        justify-content: left;
+        padding-bottom: 0;
+    }
+
+    .date-text {
+        font-size: .85rem;
+    }
+
+    .input-value {
+        width: 120px;
+        height: 60px;
+        font-size: 1.3rem;
+    }
+
+    .result-section {
+        padding-block: 0;
+    }
+
+    .result-wrapper {
+        font-size: 4rem;
+        line-height: 4.5rem;
+    }
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
